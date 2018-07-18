@@ -1,8 +1,11 @@
-sqlcmd.exe -S "server name".database.windows.net -d "database name" -U "username"@"server name" -P "password" -I -Q 
-"CREATE TABLE [dbo].[USDJPY]
+--- Create a new table
+CREATE TABLE [dbo].[AzureDevTools]
 (
     [ID] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
     [Title] NVARCHAR(MAX),
-    [Description] NVARCHAR(MAX),
-    [Created] DATETIME NOT NULL
-)"
+    [Description] NVARCHAR(MAX)
+)
+
+
+--- Select items in table
+SELECT * FROM  [dbo].[AzureDevTools]
